@@ -265,3 +265,29 @@ tr:hover{
     }
 
 }
+
+.ai-chat-box{
+    background:#08143c;
+    padding:20px;
+    border-radius:20px;
+    margin-top:20px;
+}
+
+.ai-chat-box input{
+    width:70%;
+    padding:12px;
+    border-radius:10px;
+}
+
+.ai-chat-box button{
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    background:#7fffb0;
+    font-weight:bold;
+}
+
+#aiResponse{
+    margin-top:20px;
+    color:white;
+}

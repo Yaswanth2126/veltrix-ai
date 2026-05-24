@@ -1,6 +1,12 @@
+import google.generativeai as genai
+import os
 from flask import Flask, render_template, request, redirect, session, jsonify
 import random
 import requests
+
+genai.configure(api_key=os.getenv("AIzaSyBYyJ-x5zq6YG1zB1IqQhmjLM01eb11ZSU"))
+
+model = genai.GenerativeModel("gemini-1.5-flash")
 
 app = Flask(__name__)
 
@@ -43,6 +49,16 @@ def dashboard():
         return redirect("/")
 
     return render_template("index.html")
+
+@app.route("/chat", methods=["POST"])
+def chat():
+    user_message = request.form.get("message")
+
+    response = model.generate_content(user_message)
+
+    return {
+        "reply": response.text
+    }
 
 # ======================================
 # MARKET DATA
