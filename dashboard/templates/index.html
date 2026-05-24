@@ -613,6 +613,53 @@ async function sendMessage() {
         "<p>" + data.reply + "</p>";
 }
 </script>
+<div class="ai-chat-box">
+    <h2>🤖 VELTRIX AI Assistant</h2>
+
+    <input
+        type="text"
+        id="userMessage"
+        placeholder="Ask VELTRIX AI..."
+    >
+
+    <button onclick="sendMessage()">
+        Ask AI
+    </button>
+
+    <div id="aiResponse"></div>
+</div>
+
+<script>
+
+async function sendMessage(){
+
+    const message =
+        document.getElementById("userMessage").value;
+
+    const response =
+        await fetch("/chat", {
+
+            method:"POST",
+
+            headers:{
+                "Content-Type":
+                "application/x-www-form-urlencoded"
+            },
+
+            body:
+            "message=" +
+            encodeURIComponent(message)
+
+        });
+
+    const data =
+        await response.json();
+
+    document.getElementById("aiResponse").innerHTML =
+        data.reply;
+}
+
+</script>
 </body>
 
 
