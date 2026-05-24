@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 aniso8601==9.0.1
 annotated-types==0.7.0
 anyio==4.12.1
@@ -144,3 +145,12 @@ wsproto==1.3.2
 WTForms==3.2.1
 zipp==3.23.0
 zmq==0.0.0
+=======
+flask
+gunicorn
+requests
+yfinance
+pandas
+numpy
+google-generativeai
+>>>>>>> 2d564f875f4990171bdf752be7659d1abd4a02d0

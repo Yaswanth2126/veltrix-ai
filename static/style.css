@@ -1,0 +1,267 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#050816;
+    color:white;
+}
+
+.main-container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    width:250px;
+    background:#0b1023;
+    padding:30px 20px;
+    border-right:1px solid rgba(255,255,255,0.05);
+}
+
+.sidebar h2{
+    color:#6dffb3;
+    margin-bottom:40px;
+    font-size:38px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    background:#121a35;
+    padding:18px;
+    margin-bottom:15px;
+    border-radius:14px;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:18px;
+}
+
+.sidebar li:hover{
+    background:#1a2547;
+    transform:translateX(5px);
+}
+
+/* MAIN CONTENT */
+
+.content{
+    flex:1;
+    padding:20px;
+}
+
+/* TOP BAR */
+
+.topbar{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-bottom:25px;
+}
+
+.market-box{
+    background:#0d1430;
+    border:1px solid rgba(255,255,255,0.05);
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+/* CHART SECTION */
+
+.chart-layout{
+    display:grid;
+    grid-template-columns:3fr 1fr;
+    gap:20px;
+    margin-bottom:25px;
+}
+
+.main-chart-panel{
+    background:#0b122d;
+    border-radius:20px;
+    padding:20px;
+    height:550px;
+    box-shadow:0 0 25px rgba(0,0,0,0.4);
+}
+
+.chart-title{
+    font-size:28px;
+    font-weight:bold;
+    color:#6dffb3;
+    margin-bottom:20px;
+}
+
+#tradingChart{
+    width:100%;
+    height:450px !important;
+}
+
+/* RIGHT PANEL */
+
+.right-panel{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.watchlist-box,
+.signal-box{
+    background:#0b122d;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 0 25px rgba(0,0,0,0.4);
+}
+
+.watchlist-box h3,
+.signal-box h3{
+    margin-bottom:20px;
+    color:#ffb347;
+    font-size:24px;
+}
+
+.watch-item,
+.signal-item{
+    background:#121a35;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:12px;
+    display:flex;
+    justify-content:space-between;
+    font-size:18px;
+}
+
+/* BUY SELL SECTION */
+
+.opportunity-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-bottom:25px;
+}
+
+.opportunity-box{
+    border-radius:20px;
+    padding:25px;
+    min-height:180px;
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+.buy-box{
+    background:linear-gradient(
+        135deg,
+        rgba(0,255,120,0.12),
+        rgba(0,255,120,0.04)
+    );
+}
+
+.sell-box{
+    background:linear-gradient(
+        135deg,
+        rgba(255,0,80,0.12),
+        rgba(255,0,80,0.04)
+    );
+}
+
+.opportunity-box h3{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.opportunity-item{
+    background:rgba(255,255,255,0.05);
+    padding:14px;
+    border-radius:12px;
+    margin-bottom:12px;
+    font-size:18px;
+}
+
+/* TABLE */
+
+.table-section{
+    background:#0b122d;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 0 25px rgba(0,0,0,0.4);
+}
+
+.table-title{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#121a35;
+    padding:18px;
+    font-size:18px;
+}
+
+td{
+    padding:18px;
+    text-align:center;
+    border-bottom:1px solid rgba(255,255,255,0.05);
+    font-size:17px;
+}
+
+tr:hover{
+    background:rgba(255,255,255,0.03);
+}
+
+/* COLORS */
+
+.buy-text{
+    color:#00ff99;
+    font-weight:bold;
+}
+
+.sell-text{
+    color:#ff4d6d;
+    font-weight:bold;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1200px){
+
+    .chart-layout{
+        grid-template-columns:1fr;
+    }
+
+    .topbar{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:800px){
+
+    .main-container{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+    }
+
+    .topbar{
+        grid-template-columns:1fr;
+    }
+
+    .opportunity-section{
+        grid-template-columns:1fr;
+    }
+
+}
