@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # OpenAlgo - Open Source Algorithmic Trading Platform
 
 <div align="center">
@@ -416,3 +417,6 @@ Always test your strategies in Analyzer Mode before deploying with real money. P
 ---
 
 Built with ❤️ by traders, for traders. Making algorithmic trading accessible to everyone.
+=======
+# veltrix-ai
+>>>>>>> c7e2eace927c0762812d065de75dbaf1ab8322af
